@@ -1,0 +1,9 @@
+# Local scratch and deliverable preview files
+/work/
+/outputs/
+
+# Editor and operating system files
+.DS_Store
+Thumbs.db
+*.swp
+*.log

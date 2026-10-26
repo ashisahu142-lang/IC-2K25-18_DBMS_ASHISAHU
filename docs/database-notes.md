@@ -25,7 +25,7 @@ Replace `USER` and `DATABASE` with your local values. Scripts 14–20 depend on 
 - Questions 14–20 require each referenced parent key to be a primary key or unique index. Parent and child column types and signedness must match. InnoDB requires parent and child tables to use InnoDB for enforcement.
 - The sample parent `jobs.job_id` is `VARCHAR(10)` in Questions 14 and 16, but integer in Questions 17–20. Do not mix these parent schemas with a child answer that expects a different type.
 - InnoDB treats `NO ACTION` as `RESTRICT`; the check is immediate, not deferred.
-- Current MySQL 8.0 enforces `CHECK` constraints. Older server releases may parse but ignore them; use a current release for Questions 6 and 7.
+- MySQL 8.0.16 and later enforces `CHECK` constraints. Earlier 8.0 releases may parse but ignore them; use 8.0.16 or later for Questions 6 and 7.
 
 ## Parent-table dependencies and suggested order
 

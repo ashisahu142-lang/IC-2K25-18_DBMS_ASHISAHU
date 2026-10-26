@@ -4,7 +4,7 @@ This project answers all 20 questions in the original DBMS Assignment 1 document
 
 ## Prerequisites
 
-- MySQL 8.0 or later
+- MySQL 8.0.16 or later
 - InnoDB for questions that use foreign keys and referential actions
 - A selected development schema and an account with `CREATE` privileges
 - Existing parent tables for foreign-key questions 14–20

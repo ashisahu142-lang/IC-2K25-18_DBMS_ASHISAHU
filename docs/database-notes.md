@@ -15,6 +15,7 @@ Replace `USER` and `DATABASE` with your local values. Scripts 14–20 depend on 
 ## Assumptions
 
 - The assignment omits data types for most columns. Types follow common HR schema conventions: country IDs are `CHAR(2)`, job IDs are `VARCHAR(10)` in Questions 14 and 16, employee IDs are integers, and date fields use `DATE`. Questions 17–20 use the assignment's integer `jobs.job_id`.
+- Question 8 spells the table `job_histry`, while Question 14 spells it `job_history`; the Q8 script preserves `job_histry` exactly, and the questions are treated independently.
 - Question 8's `--/--/----` is read as day/month/four-digit-year input. A MySQL `DATE` stores a date value rather than a display mask, and is normally rendered `YYYY-MM-DD`. Parse text input such as `26/10/2026` with `STR_TO_DATE('26/10/2026', '%d/%m/%Y')` when inserting.
 - Question 10's blank job title is an empty string (`''`). A default is used when the column is omitted or `DEFAULT` is specified; explicitly inserting `NULL` is different.
 - Question 12 uses an integer country ID because MySQL `AUTO_INCREMENT` requires an integer column and an index. The column is unique as requested.

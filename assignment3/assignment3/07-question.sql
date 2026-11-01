@@ -1,0 +1,5 @@
+-- Question 7
+-- Write a query to display the last name of employees whose names have exactly 6 characters.
+SELECT last_name
+FROM employees
+WHERE CHAR_LENGTH(last_name) = 6;

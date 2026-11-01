@@ -50,13 +50,4 @@ README.md                           Project setup and question index
 17. [Cascade job ID updates; restrict job deletion](sql/17-employees-update-cascade-delete-restrict.sql)
 18. [Cascade job deletion; restrict job ID updates](sql/18-employees-delete-cascade-update-restrict.sql)
 19. [Set child job IDs to `NULL` on parent changes](sql/19-employees-set-null-actions.sql)
-20. [Reject parent changes with `NO ACTION`](sql/20-employees-no-action.sql)
-
-## Troubleshooting
-
-- **Table already exists:** choose a fresh practice schema or resolve the existing table deliberately. The scripts do not delete tables.
-- **Foreign key cannot be created:** check that the parent exists, is InnoDB, has the referenced key indexed, and has matching child/parent column types and signedness. For the composite key in Question 15, the columns and order must match.
-- **Foreign-key insert is rejected:** insert a matching parent row first. A NULL child key is accepted only where that column allows NULL.
-- **`CHECK` constraints do not reject bad values:** use a current MySQL 8.0 release.
-- **Date output is `YYYY-MM-DD`:** MySQL stores a DATE value, not its original text format. Parse day/month/year input with `STR_TO_DATE(value, '%d/%m/%Y')`.
-- **A default was not used:** omit the column or use `DEFAULT`; explicitly inserting `NULL` does not request the column default.
+20. [Reject parent changes with `NO ACTION`](sql/20-employees-no-action.

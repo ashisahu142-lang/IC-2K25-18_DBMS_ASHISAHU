@@ -1,5 +1,4 @@
--- Question 16: Requires departments(department_id) and jobs(job_id) as
--- PRIMARY KEY or UNIQUE keys. Parent and child tables must use InnoDB.
+-- Question 16: Requires departments(department_id) and jobs(job_id) 
 CREATE TABLE employees (
     employee_id   INT NOT NULL,
     first_name    VARCHAR(20),
@@ -17,4 +16,4 @@ CREATE TABLE employees (
         FOREIGN KEY (department_id) REFERENCES departments (department_id),
     CONSTRAINT fk_employees_job
         FOREIGN KEY (job_id) REFERENCES jobs (job_id)
-) ENGINE=InnoDB;
+)

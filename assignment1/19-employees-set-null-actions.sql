@@ -1,5 +1,5 @@
 -- Question 19: Parent deletes or updates set child job IDs to NULL.
--- job_id must remain nullable; both tables must use InnoDB.
+-- job_id must remain nullable; both .
 CREATE TABLE employees (
     employee_id INT NOT NULL,
     first_name  VARCHAR(20),
@@ -11,4 +11,4 @@ CREATE TABLE employees (
         FOREIGN KEY (job_id) REFERENCES jobs (job_id)
         ON DELETE SET NULL
         ON UPDATE SET NULL
-) ENGINE=InnoDB;
+);

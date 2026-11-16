@@ -8,4 +8,4 @@ CREATE TABLE job_history (
     CONSTRAINT uq_job_history_employee UNIQUE (employee_id),
     CONSTRAINT fk_job_history_job
         FOREIGN KEY (job_id) REFERENCES jobs (job_id)
-) ENGINE=InnoDB;
+) ;

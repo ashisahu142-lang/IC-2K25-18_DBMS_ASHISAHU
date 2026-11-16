@@ -1,5 +1,5 @@
 -- Question 18: Parent job deletes cascade to employees; updates are restricted.
--- Requires jobs(job_id) as PRIMARY KEY or UNIQUE and InnoDB on both tables.
+-- Requires jobs(job_id) as PRIMARY KEY or UNIQUE 
 CREATE TABLE employees (
     employee_id INT NOT NULL,
     first_name  VARCHAR(20),
@@ -11,4 +11,4 @@ CREATE TABLE employees (
         FOREIGN KEY (job_id) REFERENCES jobs (job_id)
         ON DELETE CASCADE
         ON UPDATE RESTRICT
-) ENGINE=InnoDB;
+);
